@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #spy-container {
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .img-box {
+            width: 312px;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px #000;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border: 1px solid lightgray;
+            position: absolute;
+            transition: top .5s, left .5s;
+        }
+
+        .img-box:hover {
+            margin: 0 3px 2px 1px;
+            box-shadow: 2px 2px 4px #000;
+        }
+
+        .img-box img {
+            display: block;
+            width: 300px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="spy-container"></div>
+</body>
+<script>
+  
+  window.fallsObject = {
+    imgList: [
+      { src: './img/1.jpg', width: 550, height: 452 },
+      { src: './img/2.jpg', width: 720, height: 640 },
+      { src: './img/3.jpg', width: 1600, height: 900 },
+      { src: './img/4.jpg', width: 700, height: 560 },
+      { src: './img/5.jpg', width: 700, height: 536 },
+      { src: './img/6.jpg', width: 686, height: 430 },
+      { src: './img/7.jpg', width: 600, height: 337 },
+      { src: './img/8.jpg', width: 640, height: 332 },
+      { src: './img/9.jpg', width: 700, height: 677 },
+      { src: './img/10.jpg', width: 224, height: 280 },
+      { src: './img/11.jpg', width: 700, height: 510 },
+      { src: './img/12.jpg', width: 486, height: 558 },
+      { src: './img/13.jpg', width: 224, height: 398 },
+      { src: './img/14.jpg', width: 700, height: 373 },
+      { src: './img/15.jpg', width: 224, height: 343 },
+      { src: './img/16.jpg', width: 2000, height: 2830 },
+      { src: './img/17.jpg', width: 600, height: 1066 },
+      { src: './img/18.jpg', width: 600, height: 402 },
+      { src: './img/19.jpg', width: 560, height: 570 },
+      { src: './img/20.jpg', width: 640, height: 1331 },
+      { src: './img/21.jpg', width: 640, height: 360 },
+      { src: './img/22.jpg', width: 700, height: 933 },
+      { src: './img/23.jpg', width: 640, height: 789 },
+      { src: './img/24.jpg', width: 700, height: 990 },
+      { src: './img/25.jpg', width: 1242, height: 2688 },
+      { src: './img/26.jpg', width: 675, height: 900 },
+      { src: './img/27.jpg', width: 700, height: 1244 },
+      { src: './img/28.jpg', width: 600, height: 1700 },
+      { src: './img/29.jpg', width: 658, height: 802 },
+      { src: './img/30.jpg', width: 566, height: 800 },
+    ],
+    dom:'#spy-container',
+    boxBorder:1,
+    boxPadding:5,
+    boxMarginRight:10,
+    boxMarginBottom:10,
+    infinite:true
+  }
+  
+</script>
+<script src="./js/index.js"></script>
+</html>
